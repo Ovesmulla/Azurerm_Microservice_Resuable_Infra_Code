@@ -123,3 +123,28 @@ bastion = {
     }
   }
 }
+
+servers = {
+  server1 = {
+    name                          = "serverdbos1"
+    location                      = "westus"
+    resource_group_name           = "micro-rg-001"
+    public_network_access_enabled = true
+    administrator_login           = "server15"
+    administrator_login_password  = "Oves@12345"
+    version                       = "12.0"
+  }
+}
+
+database = {
+  db1 = {
+    name                = "osdb01"
+    server_name         = "serverdbos1"
+    resource_group_name = "micro-rg-001"
+    collation           = "SQL_Latin1_General_CP1_CI_AS"
+    license_type        = "LicenseIncluded"
+    max_size_gb         = 2
+    sku_name            = "S0"
+    enclave_type        = "VBS"
+  }
+}
